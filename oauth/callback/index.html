@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canva OAuth Callback</title>
+</head>
+<body>
+  <h2>Authorization Successful!</h2>
+  <p>You can close this tab and return to your application.</p>
+  <script>
+    // Captures authorization code from the URL query params
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    if (code) {
+      console.log("Authorization Code:", code);
+    }
+  </script>
+</body>
+</html>
